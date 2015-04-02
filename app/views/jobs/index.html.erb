@@ -3,10 +3,16 @@
 <% @jobs.each do |job| %>
 <div  id="wrapper">
 	<div id='container'>
-		<h5>Posted By...<div id='content'> <%= job.title %></div></h5>
-		<h7>content...<div id='content'><%= job.description %></h5></h7>
-		<span><%= link_to "Edit Posting", edit_job_path(job)%>
+		<h5>Posted By...</h5>
+		<h2><%= job.title %></h2>
+
+		
+		<h7>content...<div id='content'><%= job.description %></h7>
+		<div>
+			<span><%= link_to "Edit Posting", edit_job_path(job)%>
 		  <%= link_to 'Delete Posting', job, method: :delete %></span>
+		</div>
+		
 	</div>
 </div>
 
